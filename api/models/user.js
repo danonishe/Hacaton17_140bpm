@@ -34,6 +34,7 @@ export default class User extends Model {
     }
 
     validatePassword(password) {
+        console.log(`ХУЙПиЗДА ${password}`);
         return bcrypt.compareSync(password, this.password);
     }
 }
