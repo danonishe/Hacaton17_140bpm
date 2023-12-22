@@ -13,7 +13,7 @@ export default class User extends Model {
                 },
                 password: { type: DataTypes.STRING, allowNull: false },
                 name: { type: DataTypes.STRING, allowNull: false },
-                rating: { type: DataTypes.SMALLINT, allowNull: true },
+                rating: { type: DataTypes.INTEGER, allowNull: true },
             },
             {
                 sequelize,
