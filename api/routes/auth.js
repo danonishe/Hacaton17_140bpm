@@ -9,5 +9,9 @@ router.post('/login', asyncRoute(authController.login));
 
 router.post('/register', asyncRoute(authController.register));
 
+router.route('/login')
+    .post(asyncRoute(authController.login))
+    .get(asyncRoute(authController.get))
+
 
 export default router;
