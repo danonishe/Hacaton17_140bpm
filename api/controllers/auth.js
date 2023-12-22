@@ -38,5 +38,9 @@ export default {
         const { jwt: token, iat } = jwt.generate({ id: user.id }, { expiresIn: '15m' });
         await user.update({ iat });
         res.json({ user, token });
+    },
+
+    async self({ user }, res){
+        res.json({ user });
     }
 }
