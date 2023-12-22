@@ -30,11 +30,10 @@ export default class User extends Model {
         }
 
         User.beforeCreate(beforeCU);
-        User.beforeUpdate(beforeCU);
+        // User.beforeUpdate(beforeCU);
     }
 
     validatePassword(password) {
-        console.log(`ХУЙПиЗДА ${password}`);
         return bcrypt.compareSync(password, this.password);
     }
 }
