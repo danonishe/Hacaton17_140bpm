@@ -11,9 +11,10 @@ export default class User extends Model {
                     unique: 'login',
                     validate: { isEmail: { msg: 'Must be a valid email address' } },
                 },
+                iat: { type: DataTypes.BIGINT },
                 password: { type: DataTypes.STRING, allowNull: false },
                 name: { type: DataTypes.STRING, allowNull: false },
-                rating: { type: DataTypes.SMALLINT, allowNull: true },
+                rating: { type: DataTypes.INTEGER, allowNull: true, defaultValue: 0 },
             },
             {
                 sequelize,
@@ -28,8 +29,8 @@ export default class User extends Model {
             user.set('password', bcrypt.hashSync(user.password, bcrypt.genSaltSync()));
         }
 
-        Client.beforeCreate(beforeCU);
-        Client.beforeUpdate(beforeCU);
+        User.beforeCreate(beforeCU);
+        // User.beforeUpdate(beforeCU);
     }
 
     validatePassword(password) {
