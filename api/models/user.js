@@ -28,8 +28,8 @@ export default class User extends Model {
             user.set('password', bcrypt.hashSync(user.password, bcrypt.genSaltSync()));
         }
 
-        Client.beforeCreate(beforeCU);
-        Client.beforeUpdate(beforeCU);
+        User.beforeCreate(beforeCU);
+        User.beforeUpdate(beforeCU);
     }
 
     validatePassword(password) {

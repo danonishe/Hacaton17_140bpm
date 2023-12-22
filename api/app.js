@@ -1,5 +1,6 @@
 import express from 'express';
 import corsMiddleware from './middlewares/cors.js';
+import dbUtils from './utils/db.js';
 
 const app = express();
 

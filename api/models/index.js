@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize";
-import Place from "./place";
-import FavPlace from "./favPlace";
-import Feedback from "./feedback";
-import User from "./user";
+import Place from "./place.js";
+import FavPlace from "./favPlace.js";
+import Feedback from "./feedback.js";
+import User from "./user.js";
 import "dotenv/config"
 
 const { DB_USER, DB_PWD, DB_HOST, DB_PORT } = process.env;
