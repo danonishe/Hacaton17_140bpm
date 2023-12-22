@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "dev": "your-dev-command-here"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
