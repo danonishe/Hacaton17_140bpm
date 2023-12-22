@@ -1,5 +1,6 @@
 import User from "../models/user.js";
 import {AppErrorAlreadyExists, AppErrorInvalid, AppErrorMissing} from "../utils/errors.js";
+import jwt from '../utils/jwt.js';
 
 export default {
     async register({body: {login, password, name}}, res){
@@ -20,17 +21,20 @@ export default {
             password,
             name,
         });
-
-        res.json({ user });
+        const { jwt: token, iat } = jwt.generate({ id: user.id }, { expiresIn: '15m' });
+        await user.update({ iat });
+        res.json({ token });
     },
 
     async login({ body: { login, password } }, res){
         if (!login) throw new AppErrorMissing("login");
         if (!password) throw new AppErrorMissing("password");
 
-        const CheckUser = await User.findOne({ where: { login: login } });
-        if (!CheckUser || !CheckUser.validatePassword(password)) throw new AppErrorInvalid("login or password");
+        const user = await User.findOne({ where: { login } });
+        if (!user || !user.validatePassword(password)) throw new AppErrorInvalid("login or password");
 
-        res.json({ status: 'OK' });
+        const { jwt: token, iat } = jwt.generate({ id: user.id }, { expiresIn: '15m' });
+        await user.update({ iat });
+        res.json({ user, token });
     }
 }

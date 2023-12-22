@@ -11,6 +11,7 @@ export default class User extends Model {
                     unique: 'login',
                     validate: { isEmail: { msg: 'Must be a valid email address' } },
                 },
+                iat: { type: DataTypes.BIGINT },
                 password: { type: DataTypes.STRING, allowNull: false },
                 name: { type: DataTypes.STRING, allowNull: false },
                 rating: { type: DataTypes.INTEGER, allowNull: true, defaultValue: 0 },
