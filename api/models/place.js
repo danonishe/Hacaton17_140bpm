@@ -1,4 +1,5 @@
-import { DataTypes, Model } from "sequelize";
+import { DataTypes, Model} from "sequelize";
+import { SequelizeGeometryType } from 'sequelize-geometry';
 import placeTypes from "../config/place-types.js";
 
 export default class Place extends Model {
@@ -11,6 +12,10 @@ export default class Place extends Model {
                     type: DataTypes.SMALLINT,
                     allowNull: false,
                     validate: { isIn: [Object.values(placeTypes)] },
+                },
+                location: {
+                    type: Sequeli,
+                    allowNull: true,
                 }
             },
             {
