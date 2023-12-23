@@ -45,7 +45,7 @@ function Interests() {
         onClick={() => funActive(props.index)}
       >
         <div className={style.icon}>
-          <img src={`./img/icon/icon${props.index + 1}b.svg`} alt="icon" />
+          <img src={`./img/interests/icon${props.index + 1}.svg`} alt="icon" />
         </div>
         <p>{props.el}</p>
       </div>
