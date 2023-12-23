@@ -1,8 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Authorization.module.scss';
 import { Link } from 'react-router-dom';
 import Header from '../../ui/Header/Header';
+import axios from 'axios';
+
 export default function Authorization() {
+    const [loginValue, setLoginValue] = useState('');
+    const [passwordValue, setPasswordValue] = useState('');
+
+    const handleLogin = () => {
+        // Создайте объект с данными для отправки
+         const data = {
+            login: loginValue,
+            password: passwordValue,
+        };
+console.log(data);
+      axios.post("https://968f-2a03-d000-158e-5fee-850-49ec-82fb-dcf9.ngrok-free.app", data)
+        .then(response => {
+          console.log("Авторизация прошла успешно");
+          const myToken = response.data.token;
+          console.log(myToken);
+        })
+        .catch(error => {
+          console.log("нет", error);
+        });
+    }
 
     return (
         <div className={styles.mian}>
@@ -14,13 +36,11 @@ export default function Authorization() {
         <div className={styles.Block__aut}>
             <div className={styles.Block__aut__inner}>
                 <div className={styles.input__block}>
-                    <input placeholder="Логин" class="form-control" v-model="loginValue" type="text" />
-                </div>
+                <input placeholder="Логин" className="form-control" value={loginValue} onChange={e => setLoginValue(e.target.value)} type="text" />                </div>
                 <div className={styles.input__block}>
-                    <input placeholder="Пароль" class="form-control" v-model="passwordValue" type="password" />
-                </div>
-                <div class={styles.block__btn}>
-                    <button type="button" class="btn btn-success">Войти</button>
+                <input placeholder="Пароль" className="form-control" value={passwordValue} onChange={e => setPasswordValue(e.target.value)} type="password" />                </div>
+                <div className={styles.block__btn}>
+                <button type="button" className="btn btn-success" onClick={handleLogin}>Войти</button>
                 </div>
                 <div className={styles.firstStart}>
                     <Link  className={styles.firstStartText} to={"./../Registration"}> <p >Впервые на сайте?</p></Link>

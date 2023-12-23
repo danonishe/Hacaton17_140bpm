@@ -23,7 +23,7 @@ export default function Registration() {
                     <input placeholder="Имя" class="form-control" v-model="loginValue" type="text" />
                 </div>
                 <div className={styles.input__block}>
-                    <input placeholder="Паароль" class="form-control" v-model="loginValue" type="text" />
+                    <input placeholder="Пароль" class="form-control" v-model="loginValue" type="text" />
                 </div>
                 <div className={styles.input__block}>
                     <input placeholder="Подтвердите пароль" class="form-control" v-model="passwordValue" type="password" />
