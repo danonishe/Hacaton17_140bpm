@@ -119,7 +119,33 @@ const Wash = ({
       onTouchEnd={handleTouchEnd}
       style={style}
     >
-      <div className={styles.Wash__info}></div>
+      <div className={styles.Wash__info}>
+        <div className={styles.Wash_info_title}>
+          <div className={styles.line}>
+            <div className={styles.box}>
+              <img src="./img/wash/wash2.svg" alt="img"></img>
+              <span>Что рядом?</span>
+            </div>
+            <div className={styles.box}>
+              <img src="./img/wash/wash3.svg" alt="img"></img>
+              <span>Маршрут</span>
+            </div>
+            <div className={styles.line_inner}></div>
+            <div className={styles.box}>
+              <img src="./img/wash/wash4.svg" alt="img"></img>
+              <span>Добавить</span>
+            </div>
+            <div className={styles.box}>
+              <img src="./img/wash/wash5.svg" alt="img"></img>
+              <span>Избранное</span>
+            </div>
+          </div>
+          <img src="./img/wash/wash1.png" alt="img" />
+          <div className={styles.name_blok}>
+            <span className={styles.name}>Память Фаине!</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

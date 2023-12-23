@@ -169,7 +169,6 @@ function MapComponent(props) {
 
             <div class="content__prise">
             
-            Кузов: от ${props.coordinats[i].prise}₽
             </div>
         </div>
       `,
