@@ -23,8 +23,18 @@ const places = [
     {
         'name': 'Парк культуры',
         'description': 'Большой крутой зеленый',
-        'type': 1
+        'type': 1,
+        'latitude': 47.220156, 
+        'longitude': 38.926121,
     },
+    {
+        'name': 'Guzzler',
+        'description': 'Любовь моповцев',
+        'type': 1,
+        'latitude': 47.209996, 
+        'longitude': 38.937090,
+    }
+    ,
     {
         'name': 'Картинная галлерея',
         'description': 'Картины бомбовые, бэкендеры тоже',
@@ -88,6 +98,8 @@ async function createTestPlaces() {
                 name: p.name,
                 description: p.description,
                 type: p.type,
+                latitude: p.latitude || null,
+                longitude: p.longitude || null,
             })
         }
     }
