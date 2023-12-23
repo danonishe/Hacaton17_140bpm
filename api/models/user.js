@@ -15,7 +15,12 @@ export default class User extends Model {
                 password: { type: DataTypes.STRING, allowNull: false },
                 name: { type: DataTypes.STRING, allowNull: false },
                 rating: { type: DataTypes.INTEGER, allowNull: true, defaultValue: 0 },
-                favTypes: { type: DataTypes.ARRAY(DataTypes.SMALLINT), allowNull: true },
+                favTypes: {
+                    type: DataTypes.ARRAY(DataTypes.SMALLINT),
+                    allowNull: true,
+                    defaultValue: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+                },
+                imgUrl: { type: DataTypes.STRING, allowNull: true },
             },
             {
                 sequelize,

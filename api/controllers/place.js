@@ -4,10 +4,11 @@ import { AppErrorAlreadyExists, AppErrorInvalid, AppErrorMissing, AppErrorNotExi
 
 export default {
 
-    async createPlace({body: {name, description, type}}, res){
+    async createPlace({body: {name, description, type, imgUrl, latitude, longitude}}, res){
         if (!name) throw new AppErrorMissing("name");
         if (!description) throw new AppErrorMissing("description");
         if (!type) throw new AppErrorMissing("type");
+        if (!imgUrl) throw new AppErrorMissing('imgUrl');
 
         if (name.length <=3) throw new AppErrorInvalid('name');
         
@@ -18,6 +19,9 @@ export default {
             name,
             description,
             type,
+            imgUrl,
+            latitude,
+            longitude,
         });
 
         res.json({place});
@@ -42,6 +46,12 @@ export default {
 
         res.json({existPlace});
     },
+
+    // async getMostNearPlaces(req, res){
+    //     const userPoint = req.body.;
+    //
+    //
+    // },
 
     async getPlaces(req, res){
 
