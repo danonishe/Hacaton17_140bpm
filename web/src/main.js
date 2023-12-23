@@ -5,7 +5,7 @@ import components from '@/components/UI';
 import router from './router/index';
 import 'bootstrap/dist/css/bootstrap.css';
 import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.js';
-import store from './store'; // Import your Vuex store module
+import store from '@/store'; // Import your Vuex store module
 
 const app = createApp(App);
 

@@ -49,11 +49,12 @@ export default {
       };
       
      //Отправка запроса с помощью Axios
-      axios.post('http://localhost:3000/auth/register', data)
+      axios.post(this.$store.state.db+'/auth/register', data)
         .then(response => {
         console.log("Регистрация прошла успешно");
         const myToken = response.data.token;
-          console.log(myToken);
+        this.$store.commit('setJWT',myToken);
+          console.log(this.$store.state.jwt );
           this.$router.push('/PlaceCategories');
         })
         .catch(error => {

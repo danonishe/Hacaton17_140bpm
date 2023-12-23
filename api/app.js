@@ -5,6 +5,7 @@ import testUtils from './utils/test_data.js';
 import dbUtils from './utils/db.js';
 
 import authRoute from './routes/auth.js';
+import userRoute from './routes/user.js';
 import placeRoute from './routes/place.js';
 import favPlaceRoute from './routes/favPlace.js';
 import feedbackRoute from './routes/feedback.js';
@@ -31,6 +32,7 @@ app.use(cookieParser());
 app.use(corsMiddleware);
 
 app.use('/auth', authRoute);
+app.use('/user', userRoute);
 app.use('/place', placeRoute);
 app.use('/favPlace', favPlaceRoute);
 app.use('/feedback', feedbackRoute);

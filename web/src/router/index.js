@@ -4,7 +4,7 @@ import PlaceCategories from '@/pages/PlaceCategories'
 import HomePage from '@/pages/HomePage'
 const routes = [
   {
-    path: '/main',
+    path: '/',
     name: 'main',
     component: MainPage
   },
