@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from '@/pages/MainPage'
-import CategoryPage from '@/pages/CategoryPage'
-
+import PlaceCategories from '@/pages/PlaceCategories'
+import HomePage from '@/pages/HomePage'
 const routes = [
   {
     path: '/main',
@@ -9,10 +9,18 @@ const routes = [
     component: MainPage
   },
   {
-    path: '/category',
-    name: 'category',
-    component: CategoryPage
+
+    path: '/PlaceCategories',
+    name: 'PlaceCategories',
+    component: PlaceCategories
   },
+  {
+
+    path: '/HomePage',
+    name: 'HomePage',
+    component: HomePage
+  },
+
 
 ]
 

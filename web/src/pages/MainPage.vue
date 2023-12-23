@@ -1,6 +1,6 @@
 <template>
   <div class="container__main">
-    <img src="@/assets/images/logo.svg">
+    <my-header></my-header>
     <div class="title">
       <p>ПЕРЕДВИГАЙТЕСЬ БОЛЬШЕ С 140BPM</p>
     </div>
@@ -32,7 +32,7 @@ export default {
   display: flex;
   justify-content: center;
   width: 100%;
-
+  background-color: $colorGreen;
 }
 
   .title{
@@ -44,6 +44,11 @@ export default {
     margin: 0 auto; 
     color: $colorBlue;
     font-weight: 900;
+  }
+  .logo{
+    position: absolute;
+    left: 16px;
+    top: 2px;
   }
   .nlo{
     position: absolute;

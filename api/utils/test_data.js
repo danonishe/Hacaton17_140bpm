@@ -23,18 +23,22 @@ const places = [
     {
         'name': 'Парк культуры',
         'description': 'Большой крутой зеленый',
+        'type': 1
     },
     {
         'name': 'Картинная галлерея',
         'description': 'Картины бомбовые, бэкендеры тоже',
+        'type': 4
     },
     {
         'name': 'Храм',
         'description': 'Золотые купола..',
+        'type': 2
     },
     {
         'name': 'Шаурма',
         'description': 'Балдежная шаурма для балдежных людей',
+        'type': 3
     },
 ];
 const feedbacks = [
@@ -83,6 +87,7 @@ async function createTestPlaces() {
             await Place.create({
                 name: p.name,
                 description: p.description,
+                type: p.type,
             })
         }
     }

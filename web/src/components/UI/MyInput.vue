@@ -1,15 +1,13 @@
 <template>
-  <div id="container__category">
-    Priv
-  </div>
+  
 </template>
 
 <script>
 export default {
-
+name:'my-input'
 }
 </script>
 
-<style lang="scss">
+<style>
 
 </style>
