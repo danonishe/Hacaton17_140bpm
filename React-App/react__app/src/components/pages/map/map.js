@@ -27,7 +27,7 @@ export default function HomePage(props) {
       id: 0,
       x: 47.208208,
       y: 38.937189,
-      content: "Автомойка - 1",
+      content: "Память Фаине",
       prise: 500,
       rating: 4.3,
       adres: "Ул. Автомоячная 1а",
