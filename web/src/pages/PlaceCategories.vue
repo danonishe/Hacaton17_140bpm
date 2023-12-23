@@ -8,7 +8,7 @@
       <my-plase
         v-for="el in arrayPlace"
         :key="el.id"
-        src={{ el.imageUrl }}
+       :imageSrc="el.imageUrl"
         :title="el.imageTitle"
       />
       <my-button
