@@ -12,4 +12,7 @@ router.route('/addFavTypes')
 router.route('/getSuggestedPlaces')
     .get(asyncRoute(verify.general), asyncRoute(verify.user), asyncRoute(userController.getSuggestedPlaces));
 
+router.route('/addPhoto')
+    .patch(asyncRoute(verify.general), asyncRoute(verify.user), asyncRoute(userController.addPhoto));
+
 export default router;
