@@ -14,7 +14,7 @@ import {
   Polyline,
   RoutePanel,
   Marker,
-} from "react-yandex-maps";
+} from "react-yandex-map";
 import "./mapComponent.scss";
 import poi from "./img/poi.png";
 import star from "./img/star.png";

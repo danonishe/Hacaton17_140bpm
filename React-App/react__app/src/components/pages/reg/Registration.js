@@ -33,6 +33,9 @@ export default function Registration() {
                 console.log("Авторизация прошла успешно");
                 const myToken = response.data.token;
                 console.log(myToken);
+                // После успешной регистрации и получения токена
+                localStorage.setItem('token', myToken);
+
                 handleRiderect();
               
             })
