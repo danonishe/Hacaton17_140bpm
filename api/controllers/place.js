@@ -25,7 +25,6 @@ export default {
 
         const { id } = req.params;
         const updatePlace = req.body;
-        console.log("id=", id);
 
         if(!updatePlace.name) throw new AppErrorMissing('name');
         if(!updatePlace.description) throw new AppErrorMissing('description');
@@ -52,7 +51,6 @@ export default {
 
     async getPlaceById(req, res){
         const {id} = req.params;
-        console.log("id=",id)
         const existPlace = await Place.findOne({where: {id: id}});
 
         if(!existPlace) throw new AppErrorNotExist("place");

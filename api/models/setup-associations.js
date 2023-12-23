@@ -14,8 +14,8 @@ export default function () {
     });
     // User.hasMany(FavPlace, { foreignKey: { name: 'userId', allowNull: false }, as: 'favPlace' });
     // FavPlace.belongsTo(User, { foreignKey: { name: 'usersId', allowNull: false }, as: 'usersFav' });
-    // Place.hasMany(FavPlace, { foreignKey: { name: 'placeId', allowNull: false }, as: 'favPlace' });
-    // FavPlace.belongsTo(Place, { foreignKey: { name: 'placeId', allowNull: false }, as: 'placesFav' });
+    Place.hasMany(FavPlace, { foreignKey: { name: 'placeId', allowNull: false }, as: 'favPlace' });
+    FavPlace.belongsTo(Place, { foreignKey: { name: 'placeId', allowNull: false }, as: 'placesFav' });
 
     User.belongsToMany(Place, {
         through: Feedback,
