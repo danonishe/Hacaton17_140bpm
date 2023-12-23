@@ -8,7 +8,8 @@
         <my-plase
         v-for="el in arrayPlace"
         :key="el.id"
-        :imageSrc="el.imageUrl"
+
+       :imageSrc="el.imageUrl"
         :title="el.imageTitle"
         @addPlace="addPlace"
         @removePlace="removePlace"

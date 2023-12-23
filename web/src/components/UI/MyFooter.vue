@@ -6,7 +6,7 @@
     </div>
     <div class="footer__text__block">
         <img src="@/assets/images/footer/march.svg">
-        <p>Маршпут</p>
+        <p>Маршрут</p>
     </div>
     <div class="footer__text__block">
         <img src="@/assets/images/footer/add.svg">
@@ -37,6 +37,10 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 5px 16px;
+    img
+    {
+        filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    }
 }
 .footer__text__block{
     align-items: center;
