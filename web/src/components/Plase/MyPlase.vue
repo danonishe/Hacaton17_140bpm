@@ -1,6 +1,6 @@
 <template>
     <div class="block__plase">
-      <img :src="imageSrc" alt="Изображение">
+      <img src="imageSrc" alt="Изображение">
       <p>{{ title }}</p>
     </div>
   </template>
