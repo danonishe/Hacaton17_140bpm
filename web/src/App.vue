@@ -17,7 +17,7 @@
     height: 100vh;
     width: 100%;
     font-family: 'Roboto', sans-serif;
-    background-color: $colorGreen;
+  
 }
 
 </style>

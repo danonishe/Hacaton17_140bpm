@@ -28,6 +28,10 @@ export default {
 
 <style lang="scss">
 @import '@/assets/layout/index.scss';
+.container__main{
+  background-color: $colorGreen;
+ height: 100vh;
+}
 .blockFrom{
   display: flex;
   justify-content: center;
