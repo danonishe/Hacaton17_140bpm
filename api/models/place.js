@@ -1,4 +1,5 @@
 import { DataTypes, Model } from "sequelize";
+import placeTypes from "../config/place-types.js";
 
 export default class Place extends Model {
     static initialize(sequelize) {
@@ -6,6 +7,11 @@ export default class Place extends Model {
             {
                 name: { type: DataTypes.STRING, allowNull: false },
                 description: { type: DataTypes.STRING, allowNull: true },
+                type: {
+                    type: DataTypes.SMALLINT,
+                    allowNull: false,
+                    validate: { isIn: [Object.values(placeTypes)] },
+                }
             },
             {
                 sequelize,
