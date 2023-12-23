@@ -9,7 +9,7 @@ export default function Authorization() {
     const [passwordValue, setPasswordValue] = useState('');
     let navigate = useNavigate();
     function handleRiderect() {
-        navigate("/Main");
+        navigate("/");
       }
     const handleLogin = () => {
         // Создайте объект с данными для отправки
@@ -22,7 +22,9 @@ export default function Authorization() {
         .then(response => {
           console.log("Авторизация прошла успешно");
           const myToken = response.data.token;
-          console.log(myToken);
+          // После успешной регистрации и получения токена
+          localStorage.setItem('token', myToken);
+
           handleRiderect();
         })
         .catch(error => {
