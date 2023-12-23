@@ -19,5 +19,14 @@ export default {
         const places = await Place.findAll({ where: { type: user.favTypes } });
 
         res.json({ places });
+    },
+
+    async addPhoto({ body: { imgUrl }, user }, res){
+        if (!user) throw new AppErrorMissing('user');
+        if (!imgUrl) throw new AppErrorMissing('imgUrl');
+
+        user.update({ imgUrl });
+
+        res.json({ user });
     }
 }
