@@ -17,6 +17,7 @@
 
 <script>
 import axios from 'axios';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'form-aut',
@@ -34,25 +35,27 @@ export default {
     switchToRegistration() {
       this.$emit('switchToRegistration');
     },
+    ...mapActions(['saveToken']),
     submitForm() {
       const data = {
         login: this.loginValue,
-        password: this.passwordValue
+        password: this.passwordValue,
       };
-       //Отправка запроса с помощью Axios
-       axios.post('http://localhost:3000/auth/login', data)
+
+      axios.post('http://localhost:3000/auth/login', data)
         .then(response => {
-         console.log("Авторизация прошла успешно");
-         const myToken = response.data.token;
-         console.log(myToken); 
+          console.log("Авторизация прошла успешно");
+          const myToken = response.data.token;
+          console.log(myToken);
         })
         .catch(error => {
           console.log("нет", error);
         });
-
-    }
-  }
+    },
+  },
 };
+
+
 </script>
 
 

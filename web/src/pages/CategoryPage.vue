@@ -1,11 +1,13 @@
 <template>
   <div id="container__category">
-    Priv
+    <my-header></my-header>
   </div>
 </template>
 
 <script>
+import MyHeader from '../components/UI/MyHeader.vue'
 export default {
+  components: { MyHeader },
 
 }
 </script>
