@@ -5,16 +5,16 @@
             <p >Выберите категории мест которые вас привлекают</p>
         </div>
         <div class="place__block">
+            <my-plase v-for="el in arrayPlace" v-key="el.id" :imageSrc="el.imageUrl" :title="el.imageTitle" />
+            <!-- <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
             <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
             <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
             <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
             <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
             <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
             <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-
+            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" /> -->
+            <my-button :buttonText="myButtonTex='Продолжить'" @click="this.$router.push('/HomePage');" />
         </div>
     </div>
   </template>
@@ -23,8 +23,24 @@
   export default {
     data() {
         return {
-            imageUrl: "",
-            imageTitle: ""
+            arrayPlace: [
+                {
+                id: 1,
+                imageUrl: "https://i.postimg.cc/pdsWM1r6/Svg-Place.png",
+                imageTitle: "Бары"
+                },
+                {
+                    id: 2,
+                imageUrl: "https://i.postimg.cc/pdsWM1r6/Svg-Place.png",
+                imageTitle: "Бары"
+                },
+                {
+                    id: 3,
+                imageUrl: "https://i.postimg.cc/pdsWM1r6/Svg-Place.png",
+                imageTitle: "Бары"
+                }
+            ]
+           
         };
       }
   };
@@ -47,5 +63,8 @@
     display: flex;
     flex-wrap: wrap;
   }
+ .block__btn{
+    width: 100%;
+ }
   </style>
   

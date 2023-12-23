@@ -47,6 +47,8 @@ export default {
           console.log("Авторизация прошла успешно");
           const myToken = response.data.token;
           console.log(myToken);
+          this.$router.push('/HomePage');
+
         })
         .catch(error => {
           console.log("нет", error);
