@@ -4,9 +4,10 @@ import { AppErrorAlreadyExists, AppErrorInvalid, AppErrorMissing, AppErrorNotExi
 
 export default {
 
-    async createPlace({body: {name, description}}, res){
+    async createPlace({body: {name, description, type}}, res){
         if (!name) throw new AppErrorMissing("name");
         if (!description) throw new AppErrorMissing("description");
+        if (!type) throw new AppErrorMissing("type");
 
         if (name.length <=3) throw new AppErrorInvalid('name');
         
@@ -16,6 +17,7 @@ export default {
         const place = await Place.create({
             name,
             description,
+            type,
         });
 
         res.json({place});
