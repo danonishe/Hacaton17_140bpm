@@ -5,8 +5,8 @@ import testUtils from './utils/test_data.js';
 import dbUtils from './utils/db.js';
 
 import authRoute from './routes/auth.js';
-import placeRoute from './routes/place.js'
-
+import placeRoute from './routes/place.js';
+import feedbackRoute from './routes/feedback.js';
 
 const app = express();
 
@@ -29,4 +29,6 @@ app.use(corsMiddleware);
 
 app.use('/auth', authRoute);
 app.use('/place', placeRoute);
+app.use('/feedback', feedbackRoute);
+
 app.listen(3000, () => console.log(`Listen on :${3000}`));
