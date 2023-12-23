@@ -1,4 +1,6 @@
 import User from "../models/user.js";
+import Place from "../models/place.js";
+import Feedback from "../models/feedback.js";
 
 const users = [
     {
@@ -16,7 +18,51 @@ const users = [
         'password': '123QWEqwe',
         'name': 'test3',
     },
-]
+];
+const places = [
+    {
+        'name': 'Парк культуры',
+        'description': 'Большой крутой зеленый',
+    },
+    {
+        'name': 'Картинная галлерея',
+        'description': 'Картины бомбовые, бэкендеры тоже',
+    },
+    {
+        'name': 'Храм',
+        'description': 'Золотые купола..',
+    },
+    {
+        'name': 'Шаурма',
+        'description': 'Балдежная шаурма для балдежных людей',
+    },
+];
+const feedbacks = [
+    {
+        'userId': 1,
+        'placeId': 1,
+        'text': 'Отлично',
+        'mark': 5,
+    },
+    {
+        'userId': 1,
+        'placeId': 2,
+        'text': 'Плохо',
+        'mark': 2,
+    },
+    {
+        'userId': 2,
+        'placeId': 1,
+        'text': 'Пойдет',
+        'mark': 4,
+    },
+    {
+        'userId': 2,
+        'placeId': 3,
+        'text': 'Сойдет',
+        'mark': 3,
+    }
+];
 async function createTestUsers() {
     for (const u of users) {
         const user = await User.findOne({where: {login: u.login}});
@@ -30,6 +76,34 @@ async function createTestUsers() {
     }
 }
 
+async function createTestPlaces() {
+    for (const p of places) {
+        const place = await Place.findOne({where: {name: p.name}});
+        if (!place) {
+            await Place.create({
+                name: p.name,
+                description: p.description,
+            })
+        }
+    }
+}
+
+async function createTestFeedbacks(){
+    for (const f of feedbacks) {
+        const feedback = await Feedback.findOne({where: {placeId: f.placeId, userId: f.userId}});
+        if (!feedback) {
+            await Feedback.create({
+                placeId: f.placeId,
+                userId: f.userId,
+                text: f.text,
+                mark: f.mark,
+            })
+        }
+    }
+}
+
 export default {
     createTestUsers,
+    createTestPlaces,
+    createTestFeedbacks
 }

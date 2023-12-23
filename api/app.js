@@ -13,6 +13,8 @@ const app = express();
 (async function initDb() {
     try {
         await dbUtils.initializeDbModels();
+        await testUtils.createTestPlaces();
+        await testUtils.createTestFeedbacks();
         await testUtils.createTestUsers();
     } catch (e) {
         console.log(e);
