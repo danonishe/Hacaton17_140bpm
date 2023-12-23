@@ -13,7 +13,7 @@ export const models = {
     Feedback,
     User
 };
-export const sequelize = new Sequelize(process.env.NODE_ENV, DB_USER, DB_PWD, {
+export const sequelize = new Sequelize(process.env.DB_NAME, DB_USER, DB_PWD, {
     host: DB_HOST,
     port: DB_PORT,
     dialect: 'postgres',
