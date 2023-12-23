@@ -4,7 +4,6 @@ import Main from "./components/pages/main/Main";
 import Authorization from "./components/pages/auth/Authorization";
 import "bootstrap/dist/css/bootstrap.css";
 import Interests from "./components/pages/interests";
-
 function App() {
   return (
     <BrowserRouter>
