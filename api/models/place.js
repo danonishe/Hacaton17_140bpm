@@ -1,4 +1,4 @@
-import { DataTypes, Model } from "sequelize";
+import { DataTypes, Model} from "sequelize";
 import placeTypes from "../config/place-types.js";
 
 export default class Place extends Model {
@@ -11,6 +11,14 @@ export default class Place extends Model {
                     type: DataTypes.SMALLINT,
                     allowNull: false,
                     validate: { isIn: [Object.values(placeTypes)] },
+                },
+                latitude: {
+                    type: DataTypes.DOUBLE,
+                    allowNull: true,
+                },
+                longitude:{
+                    type: DataTypes.DOUBLE,
+                    allowNull: true,
                 },
                 imgUrl: { type: DataTypes.STRING, allowNull: true },
             },

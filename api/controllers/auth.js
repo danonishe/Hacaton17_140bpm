@@ -9,7 +9,7 @@ export default {
         if (!name) throw new AppErrorMissing('name');
 
         if (name.length <= 3 || name.length >= 15) throw new AppErrorInvalid('name');
-        if (login.length <= 3 || login.length >= 15 || !/^\S+@\S+\.\S+$/.test(login)) throw new AppErrorInvalid("login");
+        if (login.length <= 3 || login.length >= 15) throw new AppErrorInvalid("login");
         if (password.length <= 3 || login.length >= 15 || !/[a-z]/.test(password) || !/[A-Z]/.test(password) ||
             !/[1-9]/.test(password)) throw new AppErrorInvalid("password");
 

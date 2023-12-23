@@ -17,7 +17,11 @@ export const sequelize = new Sequelize(process.env.DB_NAME, DB_USER, DB_PWD, {
     host: DB_HOST,
     port: DB_PORT,
     dialect: 'postgres',
-    // dialectOptions: { multipleStatements: true },
+    dialectOptions: 
+    {
+        //multipleStatements: true,
+        typeCast: true,
+    },
     define: {
         // charset: 'utf8mb4',
         // collate: 'utf8mb4_unicode_ci',
