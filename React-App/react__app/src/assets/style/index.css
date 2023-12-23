@@ -7,4 +7,7 @@ body {
 *{
   font-family: Impact, sans-serif;
 }
-
+a{
+text-decoration: none;
+border: none;
+}

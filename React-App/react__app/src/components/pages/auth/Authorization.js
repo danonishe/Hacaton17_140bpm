@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './Authorization.module.scss';
-import ImgnLO from "./../../../assets/picture/nlo.svg"
-export default function Main() {
+import { Link } from 'react-router-dom';
+import Header from '../../ui/Header/Header';
+export default function Authorization() {
 
     return (
         <div className={styles.mian}>
-
+            <Header/>
       
         <div class={styles.title}>
                 <p className='font-impact'>ПЕРЕДВИГАЙТЕСЬ БОЛЬШЕ С 140BPM</p>
@@ -22,11 +23,11 @@ export default function Main() {
                     <button type="button" class="btn btn-success">Войти</button>
                 </div>
                 <div className={styles.firstStart}>
-                    <p>Впервые на сайте?</p>
+                    <Link  className={styles.firstStartText} to={"./../Registration"}> <p >Впервые на сайте?</p></Link>
                 </div>
             </div>
         </div>
-        <img src={ImgnLO} className={styles.imgFoot}></img>
+        <img src="./img/nlo.svg" className={styles.imgFoot} alt='nlo'></img>
         </div>
 
     )
