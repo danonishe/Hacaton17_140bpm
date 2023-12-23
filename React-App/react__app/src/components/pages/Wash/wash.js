@@ -33,7 +33,6 @@ const Wash = ({
   const handleMenuClick = () => {
     setOpenInfo(!openInfo);
   };
-  //   console.log(openInfo);
   const endIndex = startIndex + 3;
   const currentSlides = slides.slice(startIndex, endIndex);
 

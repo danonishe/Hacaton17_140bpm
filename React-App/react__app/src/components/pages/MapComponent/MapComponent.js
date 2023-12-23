@@ -109,7 +109,7 @@ function MapComponent(props) {
         }}
       >
         {listPoint.map((el) => el.value)}
-        <GeolocationControl options={{ float: "left" }} />
+        <GeolocationControl options={{ float: "right" }} />
         <RouteButton
           options={{
             float: "right",
@@ -118,8 +118,6 @@ function MapComponent(props) {
         <SearchControl options={{ float: "right" }} />
         <TrafficControl options={{ float: "right" }} />
         <ZoomControl options={{ float: "right" }} />
-        {/* <RouteEditor
-            /> */}
       </Map>
     );
   });
