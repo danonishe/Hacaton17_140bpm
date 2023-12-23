@@ -51,7 +51,7 @@ export default {
      //Отправка запроса с помощью Axios
       axios.post('http://localhost:3000/auth/register', data)
         .then(response => {
-         console.log("Регистрация прошла успешно");
+        console.log("Регистрация прошла успешно");
         })
         .catch(error => {
           console.log("нет", error);
