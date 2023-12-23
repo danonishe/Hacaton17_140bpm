@@ -1,19 +1,12 @@
 <template>
-    <my-header></my-header>
+   
     <div>
+        <my-header></my-header>
         <div class="titlePlase">
             <p >Выберите категории мест которые вас привлекают</p>
         </div>
         <div class="place__block">
-            <my-plase v-for="el in arrayPlace" v-key="el.id" :imageSrc="el.imageUrl" :title="el.imageTitle" />
-            <!-- <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" />
-            <my-plase :imageSrc="imageUrl='https://i.postimg.cc/pdsWM1r6/Svg-Place.png'" :title="imageTitle='Бары'" /> -->
+            <my-plase v-for="el in arrayPlace" :key="el.id" :imageSrc="el.imageUrl" :title="el.imageTitle" />
             <my-button :buttonText="myButtonTex='Продолжить'" @click="this.$router.push('/HomePage');" />
         </div>
     </div>

@@ -6,39 +6,38 @@ import { AppErrorAlreadyExists, AppErrorInvalid, AppErrorMissing, AppErrorNotExi
 
 export default {
     async createFavPlace(req, res){
-        const favPlace = req.body;
+        const user = req.user;
+        if(!user) throw new AppErrorMissing('user');
+        const {placeId} = req.params;
 
-        if(!favPlace.userId) throw new AppErrorMissing('userId');
-        if(!favPlace.placeId) throw new AppErrorMissing('placeId');
-        
         const existFavPlace = await FavPlace.findOne({where: {
-            userId: favPlace.userId,
-            placeId: favPlace.placeId,
+            userId: user.id,
+            placeId: placeId,
         }});
 
-        const existPlace = await Place.findOne({where: {id: favPlace.placeId}});
-        const existUser = await User.findOne({where: {id: favPlace.userId}});
+        const existPlace = await Place.findOne({where: {id: placeId}});
+        const existUser = await User.findOne({where: {id: user.id}});
 
         if(!existPlace) throw new AppErrorNotExist('place');
         if(!existUser) throw new AppErrorNotExist('user');
         if(existFavPlace) throw new AppErrorAlreadyExists('favPlace');
         
         const newPlace = await FavPlace.create({
-            userId: favPlace.userId,
-            placeId: favPlace.placeId
+            userId: user.id,
+            placeId: placeId,
         });
 
         res.json({newPlace});
     },
      
     async deleteFavPlaceById(req, res){
-        const userId = req.body.userId;
-        const placeId = req.body.placeId;
-        if(!userId) throw new AppErrorMissing('userId');
+        const user = req.user;
+        if(!user) throw new AppErrorMissing('user');
+        const {placeId} = req.params;
 
         const existFavPlace = await FavPlace.findOne({
             where: {
-                userId: userId,
+                userId: user.id,
                 placeId: placeId,
             }
         })
@@ -52,15 +51,15 @@ export default {
     },
      
     async getFavPlaceByIdAndUserId(req, res){
-        const userId = req.body.userId;
-        const placeId = req.body.placeId;
+        const user = req.user;
+        if(!user) throw new AppErrorMissing('user');
+        const {placeId} = req.params;
 
-        if(!userId) throw new AppErrorMissing('userId');
         if(!placeId) throw new AppErrorMissing('placeId');
 
         const existFavPlace = await FavPlace.findOne({
             where: {
-                userId: userId,
+                userId: user.id,
                 placeId: placeId,
             },
             include: {
@@ -75,12 +74,12 @@ export default {
 
     },
 
-    async getPlacesForUser(req, res){
-        const {userId} = req.params;
+    async getPlacesForUser({user}, res){
+        if(!user) throw new AppErrorMissing('user');
 
         const existFavPlaces = await FavPlace.findAll({
             where: {
-                userId: userId,
+                userId: user.id
             },
             include: {
                 model: Place,
