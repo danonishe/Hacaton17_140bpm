@@ -49,7 +49,7 @@ export default {
           const myToken = response.data.token;
           this.$store.commit('setJWT',myToken);
           console.log(this.$store.state.jwt );
-          this.$router.push('/HomePage');
+          this.$router.push('/home');
 
         })
         .catch(error => {

@@ -55,7 +55,7 @@ export default {
         const myToken = response.data.token;
         this.$store.commit('setJWT',myToken);
           console.log(this.$store.state.jwt );
-          this.$router.push('/PlaceCategories');
+          this.$router.push('/categories');
         })
         .catch(error => {
           console.log("нет", error);
@@ -63,6 +63,8 @@ export default {
     }
   }
 };
+
+
 </script>
 
 <style lang="scss">
