@@ -28,7 +28,7 @@ export default function Registration() {
 
         // Выполните Axis запрос
         console.log(data);
-        axios.post("https://c33f-95-174-102-182.ngrok-free.app/auth/register", data)
+        axios.post("https://bdaa-95-174-102-182.ngrok-free.app/auth/register", data)
             .then(response => {
                 console.log("Авторизация прошла успешно");
                 const myToken = response.data.token;

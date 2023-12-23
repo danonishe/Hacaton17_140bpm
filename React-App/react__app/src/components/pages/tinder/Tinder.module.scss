@@ -1,0 +1,45 @@
+.text{
+    color: red;
+}
+.card__tind{
+    width: 85%;
+    height: 480px;
+    background-color: #ffffff;
+   position: relative;
+   z-index: 2;
+   margin: 0 auto;
+   margin-top: 45%;
+   border-radius: 12px;
+
+}
+.card__tindBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.card__tindimgPlase{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    border-radius: 12px 12px 0px 0px ;
+    object-fit: cover;
+}
+.infoCard{
+    padding-top: 215px;
+    color: #000;
+    padding-left: 20px;
+}
+.infoCard button{
+width: 100px;
+height: 50px;
+}
+.title{
+    font-weight: 600;
+    font-size: 28px;
+}
+.Subtitle{
+    font-size: 18px;
+}
