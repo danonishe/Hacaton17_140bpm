@@ -85,7 +85,7 @@ export default function HomePage(props) {
       {isMyPage ? (
         <div className={styles.MyPage}>
           <div className={styles.MyPage_inner}>
-            <MyPage />{" "}
+            <MyPage hendelclick={hendelclick} />{" "}
           </div>
         </div>
       ) : (
