@@ -11,7 +11,8 @@ export default class Place extends Model {
                     type: DataTypes.SMALLINT,
                     allowNull: false,
                     validate: { isIn: [Object.values(placeTypes)] },
-                }
+                },
+                imgUrl: { type: DataTypes.STRING, allowNull: true },
             },
             {
                 sequelize,

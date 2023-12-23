@@ -4,10 +4,11 @@ import { AppErrorAlreadyExists, AppErrorInvalid, AppErrorMissing, AppErrorNotExi
 
 export default {
 
-    async createPlace({body: {name, description, type}}, res){
+    async createPlace({body: {name, description, type, imgUrl}}, res){
         if (!name) throw new AppErrorMissing("name");
         if (!description) throw new AppErrorMissing("description");
         if (!type) throw new AppErrorMissing("type");
+        if (!imgUrl) throw new AppErrorMissing('imgUrl');
 
         if (name.length <=3) throw new AppErrorInvalid('name');
         
@@ -18,6 +19,7 @@ export default {
             name,
             description,
             type,
+            imgUrl
         });
 
         res.json({place});
