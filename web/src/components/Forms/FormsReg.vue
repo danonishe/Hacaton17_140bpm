@@ -52,6 +52,9 @@ export default {
       axios.post('http://localhost:3000/auth/register', data)
         .then(response => {
         console.log("Регистрация прошла успешно");
+        const myToken = response.data.token;
+          console.log(myToken);
+          this.$router.push('/PlaceCategories');
         })
         .catch(error => {
           console.log("нет", error);
