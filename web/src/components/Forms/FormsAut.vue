@@ -10,6 +10,7 @@
       <my-button :buttonText="myButtonText = 'Войти'" @click="submitForm" />
       <div class="firstStart" @click="switchToRegistration">
         <p>Впервые на сайте?</p>
+        <p></p>
       </div>
     </div>
   </div>
@@ -42,11 +43,14 @@ export default {
         password: this.passwordValue,
       };
 
-      axios.post('http://localhost:3000/auth/login', data)
+      axios.post(this.$store.state.db+'/auth/login', data)
         .then(response => {
           console.log("Авторизация прошла успешно");
           const myToken = response.data.token;
-          console.log(myToken);
+          this.$store.commit('setJWT',myToken);
+          console.log(this.$store.state.jwt );
+          this.$router.push('/home');
+
         })
         .catch(error => {
           console.log("нет", error);
