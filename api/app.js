@@ -15,8 +15,8 @@ const app = express();
     try {
         await dbUtils.initializeDbModels();
         await testUtils.createTestPlaces();
-        await testUtils.createTestFeedbacks();
         await testUtils.createTestUsers();
+        await testUtils.createTestFeedbacks();
     } catch (e) {
         console.log(e);
         console.log('COULD NOT CONNECT TO THE DB, retrying in 5 seconds');
