@@ -2,10 +2,17 @@ import React, { useEffect, useState, useRef } from "react";
 import styles from "./map.module.scss";
 import Wash from "../Wash/wash";
 import MapComponent from "../MapComponent/MapComponent";
-
+import { Link } from "react-router-dom";
+import MyPage from "../myPage/myPage";
 // import MyMap from "../map/MyMap";
 
 export default function HomePage(props) {
+  const [isMyPage, setIsMyPage] = React.useState(false);
+  function hendelclick() {
+    console.log(isMyPage);
+    setIsMyPage(!isMyPage);
+  }
+
   useEffect(() => {
     // Запрещаем прокрутку на странице при монтировании компонента
     document.body.style.overflow = "hidden";
@@ -75,8 +82,17 @@ export default function HomePage(props) {
 
   return (
     <div className={styles.HomePage}>
+      {isMyPage ? (
+        <div className={styles.MyPage}>
+          <div className={styles.MyPage_inner}>
+            <MyPage hendelclick={hendelclick} />{" "}
+          </div>
+        </div>
+      ) : (
+        <div></div>
+      )}
       {/* иконка лк */}
-      <div className={styles.myIcon}>
+      <div onClick={() => hendelclick()} className={styles.myIcon}>
         <img src="./img/map/icon1.png" alt="img" />
       </div>
 

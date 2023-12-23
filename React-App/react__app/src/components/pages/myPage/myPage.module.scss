@@ -1,0 +1,87 @@
+.MyPage {
+  position: relative;
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+  }
+  .bottom {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .bottom_inner {
+    position: relative;
+
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .bottom_inner_box {
+    margin-bottom: 15px;
+    color: #7749f8;
+  }
+  .inp {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 10px;
+  }
+  .inp_text {
+    display: flex;
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  width: 100%;
+  position: absolute;
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .foto {
+    position: relative;
+  }
+  .foto2 {
+    background-color: #d3d3d3;
+    border-radius: 100%;
+    padding: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.MyPage_inner {
+  width: 90%;
+  .line {
+    margin: 0 auto;
+    width: 90%;
+    height: 1px;
+    background-color: #d3d3d3;
+    margin: 10px 0;
+  }
+  .rating {
+    width: 64px;
+    margin: 5px 10px;
+    img {
+      margin: 0;
+    }
+  }
+}
+.MyPage_inner_box {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  span {
+    display: flex;
+  }
+  .name {
+    font-weight: 700;
+  }
+}
