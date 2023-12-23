@@ -1,25 +1,29 @@
 import React, { useState } from 'react';
 import styles from './Authorization.module.scss';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../ui/Header/Header';
 import axios from 'axios';
 
 export default function Authorization() {
     const [loginValue, setLoginValue] = useState('');
     const [passwordValue, setPasswordValue] = useState('');
-
+    let navigate = useNavigate();
+    function handleRiderect() {
+        navigate("/Main");
+      }
     const handleLogin = () => {
         // Создайте объект с данными для отправки
          const data = {
             login: loginValue,
             password: passwordValue,
         };
-console.log(data);
-      axios.post("https://968f-2a03-d000-158e-5fee-850-49ec-82fb-dcf9.ngrok-free.app", data)
+        console.log(data);
+      axios.post("https://c33f-95-174-102-182.ngrok-free.app/auth/login", data)
         .then(response => {
           console.log("Авторизация прошла успешно");
           const myToken = response.data.token;
           console.log(myToken);
+          handleRiderect();
         })
         .catch(error => {
           console.log("нет", error);
@@ -30,7 +34,7 @@ console.log(data);
         <div className={styles.mian}>
             <Header/>
       
-        <div class={styles.title}>
+        <div className={styles.title}>
                 <p className='font-impact'>ПЕРЕДВИГАЙТЕСЬ БОЛЬШЕ С 140BPM</p>
             </div>
         <div className={styles.Block__aut}>
