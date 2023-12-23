@@ -8,7 +8,7 @@ function Interests() {
   const funActive = (index) => {
     const updatedActive = [...isActive];
     if (updatedActive[index] === "blue") {
-      updatedActive[index] = "#d9d9d9"; // Если текущий цвет - blue, меняем на серый
+      updatedActive[index] = "#3D8BFD"; // Если текущий цвет - blue, меняем на серый
     } else {
       updatedActive[index] = "blue"; // Иначе меняем на синий
     }
@@ -41,7 +41,7 @@ function Interests() {
     return (
       <div
         className={style.plitka}
-        style={{ backgroundColor: props.isActive[props.index] || "#d9d9d9" }}
+        style={{ backgroundColor: props.isActive[props.index] || "#3D8BFD" }}
         onClick={() => funActive(props.index)}
       >
         <div className={style.icon}>
@@ -58,21 +58,24 @@ function Interests() {
         <div className={style.logo}>
           <img src="./img/logo/logo.png" alt="logo"></img>
         </div>
-        <h1>ВЫБЕРТЕ КАТЕГОРИИ МЕСТ, КОТОРЫЕ ВАС ПРИВЛЕКАЮТ</h1>
+        <h1>
+          ВЫБЕРТЕ КАТЕГОРИИ МЕСТ,
+          <br /> КОТОРЫЕ ВАС ПРИВЛЕКАЮТ
+        </h1>
         {/* <h3>Это поможет более точно подбирать рекомендации для вас</h3> */}
         <div className={style.container}>
           {arr.map((el, index) => (
             <Item el={el} index={index} isActive={isActive} key={index} />
           ))}
           <div style={{ marginTop: "80px" }} className={style.button}>
-            <Link to="./../SelectionTour">
+            <Link to="#">
               <div className={style.button_inner}>Продолжить</div>
             </Link>
           </div>
           <div className={style.button}>
-            <Link to="./../SelectionTour">
+            <Link to="#">
               <div
-                style={{ backgroundColor: "#AEAEAE", marginTop: "10px" }}
+                style={{ backgroundColor: "#3D8BFD", marginTop: "10px" }}
                 className={style.button_inner}
               >
                 Пропустить
