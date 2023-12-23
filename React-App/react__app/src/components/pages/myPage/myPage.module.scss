@@ -1,0 +1,34 @@
+.MyPage {
+  width: 100%;
+  position: absolute;
+  .title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .foto {
+    position: relative;
+  }
+  .foto2 {
+    background-color: #d3d3d3;
+    border-radius: 100%;
+    padding: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.MyPage_inner {
+  display: flex;
+  justify-content: left;
+  img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  span {
+    display: flex;
+  }
+  .name {
+    font-weight: 700;
+  }
+}
