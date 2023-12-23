@@ -31,7 +31,6 @@ export default {
         if (!password) throw new AppErrorMissing("password");
 
         const user = await User.findOne({ where: { login: login } });
-        console.log(user.login, user.validatePassword(password));
         if (!user || !user.validatePassword(password)) throw new AppErrorInvalid("login or password");
         if (!user) throw new AppErrorInvalid("login or password");
 
