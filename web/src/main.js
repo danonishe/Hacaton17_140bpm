@@ -6,6 +6,7 @@ import router from './router/index';
 import 'bootstrap/dist/css/bootstrap.css';
 import bootstrap from 'bootstrap/dist/js/bootstrap.bundle.js';
 
+
 const app = createApp(App);
 
 components.forEach(component=>(
