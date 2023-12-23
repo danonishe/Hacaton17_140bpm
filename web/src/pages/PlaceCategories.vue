@@ -1,5 +1,5 @@
 <template>
-    <img class="logo" src="@/assets/images/logo.svg">
+    <my-header></my-header>
     <div>
         <div class="titlePlase">
             <p >Выберите категории мест которые вас привлекают</p>

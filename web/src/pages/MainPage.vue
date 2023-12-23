@@ -1,6 +1,6 @@
 <template>
   <div class="container__main">
-    <img class="logo" src="@/assets/images/logo.svg">
+    <my-header></my-header>
     <div class="title">
       <p>ПЕРЕДВИГАЙТЕСЬ БОЛЬШЕ С 140BPM</p>
     </div>
