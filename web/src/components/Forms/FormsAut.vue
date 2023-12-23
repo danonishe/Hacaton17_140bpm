@@ -1,9 +1,13 @@
 <template>
   <div class="blockFrom">
     <div class="blockFrom__innerAut">
-      <my-input :placeholder="myPlaceholder = 'Логин'" id="login"/>
-      <my-input :placeholder="myPlaceholder = 'Пароль'" id="password"/>
-      <my-button :buttonText="myButtonTex = 'Войти'" @click="submitForm" />
+       <div className="input__block">
+        <input placeholder="Логин" class="form-control" v-model="loginValue" type="text">
+      </div>
+      <div className="input__block">
+        <input placeholder="Пароль" class="form-control" v-model="passwordValue" type="password" />
+      </div>
+      <my-button :buttonText="myButtonText = 'Войти'" @click="submitForm" />
       <div class="firstStart" @click="switchToRegistration">
         <p>Впервые на сайте?</p>
       </div>
@@ -16,33 +20,44 @@ import axios from 'axios';
 
 export default {
   name: 'form-aut',
+  mounted() {
+  },
+  data() {
+    return {
+      myPlaceholder: '',
+      myButtonText: '',
+      loginValue: '',
+      passwordValue: ''
+    };
+  },
   methods: {
     switchToRegistration() {
       this.$emit('switchToRegistration');
     },
     submitForm() {
       const data = {
-        login: this.$refs.login,
-        password: this.$refs.password,
+        login: this.loginValue,
+        password: this.passwordValue
       };
-      console.log(data);
-    //   axios.post('your-server-url', data)
-    //     .then(response => {
-    //       // Обработка успешного ответа от сервера
-    //     })
-    //     .catch(error => {
-    //       // Обработка ошибки
-    //     });
-     }
-  },
-  data() {
-    return {
-      myPlaceholder: '',
-      myButtonText: ''
-    };
+       //Отправка запроса с помощью Axios
+       axios.post('http://localhost:3000/auth/login', data)
+        .then(response => {
+         console.log("Авторизация прошла успешно");
+         const myToken = response.data.token;
+         console.log(myToken); 
+        })
+        .catch(error => {
+          console.log("нет", error);
+        });
+
+    }
   }
-}
+};
 </script>
+
+
+
+
 
 
 <style lang="scss">
@@ -68,5 +83,18 @@ export default {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.input{
+  width: 100%;
+  height: 48px;
+ 
+}
+.input__block{
+ padding: 0 24px;
+ margin: 24px 0;
+}
+.input::placeholder{
+  color: $placeholderColor;
+  font-size: 16px;
 }
 </style>
