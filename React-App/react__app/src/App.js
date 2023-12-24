@@ -13,7 +13,7 @@ function App() {
       <div className="Container">
         <Routes>
           <Route path="/HomePage" element={<Map />} />
-          <Route path="/Authorization" element={<Authorization />} />
+          <Route path="/" element={<Authorization />} />
           <Route path="/Registration" element={<Registration />} />
           <Route path="/Interests" element={<Interests />} />
           <Route path="/Tinder" element={<Tinder />} />
