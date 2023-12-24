@@ -9,6 +9,7 @@ export default function Tinder() {
     console.log(isMyPage);
     setIsMyPage(!isMyPage);
   }
+
   return (
     <div className={styles.TinderMain}>
       {isMyPage && (
