@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Map from "./components/pages/map/map";
 import Tinder from "./components/pages/tinder/Tinder";
+import Geo from "./components/pages/coord/App";
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +18,7 @@ function App() {
           <Route path="/Registration" element={<Registration />} />
           <Route path="/Interests" element={<Interests />} />
           <Route path="/Tinder" element={<Tinder />} />
+          <Route path="/Geo" element={<Geo />} />
         </Routes>
       </div>
     </BrowserRouter>
