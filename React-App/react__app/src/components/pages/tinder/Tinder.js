@@ -1,3 +1,4 @@
+
 import React from 'react';
 import styles from "./Tinder.module.scss"
 import Slider from './sviper/sviper';
@@ -37,4 +38,3 @@ export default function Tinder() {
 
     )
     
-}
