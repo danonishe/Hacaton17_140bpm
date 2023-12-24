@@ -162,7 +162,10 @@ const Wash = ({
 
             <div className={styles.line_inner}></div>
             <div className={styles.box}>
+            <Link to={"/AddSob"}>
               <img src="./img/wash/wash4.svg" alt="img"></img>
+              </Link>
+             
               <span>Добавить</span>
             </div>
             <div className={styles.box}>

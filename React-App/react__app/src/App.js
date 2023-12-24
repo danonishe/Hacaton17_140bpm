@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Map from "./components/pages/map/map";
 import Tinder from "./components/pages/tinder/Tinder";
-
+import AddSob from "./components/pages/Addsob/AddSob";
 import Favorites from "./components/pages/favorites/favorites";
 function App() {
   return (
@@ -20,6 +20,8 @@ function App() {
           <Route path="/Interests" element={<Interests />} />
           <Route path="/Tinder" element={<Tinder />} />
           <Route path="/Favorites" element={<Favorites />} />
+          <Route path="/AddSob" element={<AddSob />} />
+
         </Routes>
       </div>
     </BrowserRouter>
