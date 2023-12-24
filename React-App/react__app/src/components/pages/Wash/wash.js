@@ -1,6 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./Wash.module.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Wash = ({
   address,
@@ -13,6 +13,33 @@ const Wash = ({
   funMarshrut,
   coordinats,
 }) => {
+  const location = useLocation();
+  const [myCoor, setMyCoor] = useState(0);
+  useEffect(() => {
+    // Получение текущих координат
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        setMyCoor([latitude, longitude]);
+      },
+      (error) => {
+        console.log("Ошибка при получении координат", error);
+      }
+    );
+  }, []);
+
+  console.log("koor", [myCoor[0], myCoor[1]]);
+  console.log("funMarshrut", location.state?.data);
+  function funMarshrut() {
+    console.log("koor", [myCoor[0], myCoor[1]]);
+
+    const pointB = [47.21066, 38.93363]; // координаты точки А
+    const pointA = [myCoor[0], myCoor[1]]; // координаты точки Б
+    const url = ` https://yandex.ru/maps/?rtext=${pointA}~${pointB}&rtt=auto`;
+
+    window.open(url, "_blank");
+  }
+
   const slides = [];
 
   const scrollImg = [];
@@ -139,7 +166,9 @@ const Wash = ({
               <span>Добавить</span>
             </div>
             <div className={styles.box}>
-              <img src="./img/wash/wash5.svg" alt="img"></img>
+              <Link to={"/Favorites"}>
+                <img src="./img/wash/wash5.svg" alt="img"></img>
+              </Link>
               <span>Избранное</span>
             </div>
           </div>
@@ -152,22 +181,29 @@ const Wash = ({
             вечером будет концерт с труппой театра.
           </div>
           <div className={styles.body_button}>
-            <button type="button" className="btn btn-primary">
+            <button
+              onClick={funMarshrut}
+              type="button"
+              className="btn btn-primary"
+            >
               <span>Маршрут</span>
             </button>
           </div>
-          <div className={styles.body_butbig}>
-            <img src="./img/wash/bac1.png" alt="qqq" />
+          <Link to={"/Tinder"}>
+            <div className={styles.body_butbig}>
+              <img src="./img/wash/bac1.png" alt="qqq" />
 
-            <div className={styles.body_butbig_text}>
-              <img
-                className={styles.body_butbig_img2}
-                src="./img/wash/treugolnic.png"
-                alt="qqq"
-              />
-              Куда сходить
+              <div className={styles.body_butbig_text}>
+                <img
+                  className={styles.body_butbig_img2}
+                  src="./img/wash/treugolnic.png"
+                  alt="qqq"
+                />
+                Куда сходить
+              </div>
             </div>
-          </div>
+          </Link>
+
           <div className={styles.body_butbig_img3}>
             <img width={352} src="./img/wash/foto2.png" alt="www" />
           </div>

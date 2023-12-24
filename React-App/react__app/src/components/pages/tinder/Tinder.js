@@ -26,12 +26,12 @@ export default function Tinder() {
       <div className={styles.line}>
         <div className={styles.box}>
           <Link to={"/HomePage"}>
-            <img src="./img/wash/wash2.svg" alt="img"></img>
+            <img src="./img/wash/wash2g.svg" alt="img"></img>
           </Link>
           <span>Что рядом?</span>
         </div>
         <div className={styles.box}>
-          <img src="./img/wash/wash3.svg" alt="img"></img>
+          <img src="./img/wash/wash3f.svg" alt="img"></img>
 
           <span>Маршрут</span>
         </div>
@@ -41,7 +41,9 @@ export default function Tinder() {
           <span>Добавить</span>
         </div>
         <div className={styles.box}>
-          <img src="./img/wash/wash5.svg" alt="img"></img>
+          <Link to={"/Favorites"}>
+            <img src="./img/wash/wash5.svg" alt="img"></img>
+          </Link>
           <span>Избранное</span>
         </div>
       </div>

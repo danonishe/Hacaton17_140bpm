@@ -88,17 +88,6 @@ function MapComponent(props) {
     //     });
     // };
 
-    useEffect(() => {
-      // onLoad();
-      // setLoading(true);
-    }, []);
-
-    // if(!loadedCoords){
-    //   return(
-    //     <div>Loading...</div>
-    //   )
-    // }
-
     return (
       <Map
         width={"100%"}
