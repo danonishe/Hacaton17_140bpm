@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Map from "./components/pages/map/map";
 import Tinder from "./components/pages/tinder/Tinder";
-
+import AddSob from "./components/pages/Addsob/AddSob";
 import Favorites from "./components/pages/favorites/favorites";
 import Fishka from "./components/pages/fishka/fishka";
 function App() {
@@ -21,7 +21,12 @@ function App() {
           <Route path="/Interests" element={<Interests />} />
           <Route path="/Tinder" element={<Tinder />} />
           <Route path="/Favorites" element={<Favorites />} />
+<<<<<<< HEAD
           <Route path="/Fishka" element={<Fishka />} />
+=======
+          <Route path="/AddSob" element={<AddSob />} />
+
+>>>>>>> 8a39599bebdc474421cac27cd8af06dfcc490166
         </Routes>
       </div>
     </BrowserRouter>
