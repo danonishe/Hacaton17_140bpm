@@ -139,7 +139,9 @@ const Wash = ({
               <span>Добавить</span>
             </div>
             <div className={styles.box}>
-              <img src="./img/wash/wash5.svg" alt="img"></img>
+              <Link to={"/Favorites"}>
+                <img src="./img/wash/wash5.svg" alt="img"></img>
+              </Link>
               <span>Избранное</span>
             </div>
           </div>
