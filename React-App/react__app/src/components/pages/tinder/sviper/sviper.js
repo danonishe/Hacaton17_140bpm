@@ -26,7 +26,7 @@ export default function Slider() {
        
             <div className="swiper-wrapper" style={{position: "relative",  zIndex:"5",  width:"85%", height:"480px", backgroundColor:"#fff", borderRadius:"12px", marginTop:"45%"}}>
                 <div  className="swiper-slide">
-                    <div>
+                    
 
                         <div className={styles.card__tind}>
                             <img className={styles.card__tindimgPlase} src='./img/tinder/faina.jpeg'></img>
@@ -36,10 +36,10 @@ export default function Slider() {
                                 <button className="btn btn-primary">Маршрут</button>
                             </div>
                         </div>
-                    </div>
+                   
                 </div>
                 <div  className="swiper-slide">
-                    <div>
+                  
 
                         <div className={styles.card__tind}>
                             <img className={styles.card__tindimgPlase} src='./img/tinder/faina.jpeg'></img>
@@ -49,10 +49,10 @@ export default function Slider() {
                                 <button className="btn btn-primary">Маршрут</button>
                             </div>
                         </div>
-                    </div>
+                   
                 </div>
                 <div  className="swiper-slide">
-                    <div>
+                    
                         <div className={styles.card__tind}>
                             <img className={styles.card__tindimgPlase} src='./img/tinder/faina.jpeg'></img>
                             <div className={styles.infoCard}>
@@ -61,7 +61,7 @@ export default function Slider() {
                                 <button className="btn btn-primary">Маршрут</button>
                             </div>
                         </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>
