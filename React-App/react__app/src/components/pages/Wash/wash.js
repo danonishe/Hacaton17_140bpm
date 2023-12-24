@@ -172,23 +172,26 @@ const Wash = ({
               <span>Избранное</span>
             </div>
           </div>
-          <img src="./img/wash/wash1.png" alt="img" />
-          <div className={styles.name_blok}>
-            <span className={styles.name}>Память Фаине!</span>
+          <div className={styles.line2}>
+            <img src="./img/wash/wash1.png" alt="img" />
+            <div className={styles.name_blok}>
+              <span className={styles.name}>Память Фаине!</span>
+            </div>
+            <div className={styles.body_text}>
+              В этом году у уроженки города Таганрога юбилей. В честь этого
+              вечером будет концерт с труппой театра.
+            </div>
+            <div className={styles.body_button}>
+              <button
+                onClick={funMarshrut}
+                type="button"
+                className="btn btn-primary"
+              >
+                <span>Маршрут</span>
+              </button>
+            </div>
           </div>
-          <div className={styles.body_text}>
-            В этом году у уроженки города Таганрога юбилей. В честь этого
-            вечером будет концерт с труппой театра.
-          </div>
-          <div className={styles.body_button}>
-            <button
-              onClick={funMarshrut}
-              type="button"
-              className="btn btn-primary"
-            >
-              <span>Маршрут</span>
-            </button>
-          </div>
+
           <Link to={"/Tinder"}>
             <div className={styles.body_butbig}>
               <img src="./img/wash/bac1.png" alt="qqq" />
@@ -204,9 +207,31 @@ const Wash = ({
             </div>
           </Link>
 
-          <div className={styles.body_butbig_img3}>
-            <img width={352} src="./img/wash/foto2.png" alt="www" />
+          <div className={styles.line2}>
+            <div className={styles.body_butbig_img3}>
+              <img width={352} src="./img/wash/foto2.png" alt="www" />
+            </div>
+
+            <div className={styles.name_blok}>
+              <span className={styles.name}>Продолжаем играть!</span>
+            </div>
+            <div className={styles.body_text}>
+              23-24 декабря стартует новый этап соревнования по орентации в
+              городе!
+            </div>
+            <div className={styles.body_button2}>
+              <button type="button" className={styles.body_button2_inner}>
+                Участвовать
+              </button>
+            </div>
           </div>
+
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
       </div>
     </div>
