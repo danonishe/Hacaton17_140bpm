@@ -91,17 +91,19 @@ const Favorite = (props) => {
     <main className={styles.favorite}>
       <div className={styles.favorite_body}>
         <img className={styles.img1} src={props.img1} alt="qqq"></img>
-        <div className={styles.body_box}>
-          <div className={styles.title}>{props.title}</div>
-          <div className={styles.text_body}>{props.text}</div>
-          <div>{props.data}</div>
+        <div className={styles.body_box_head}>
+          <div className={styles.body_box}>
+            <div className={styles.title}>{props.title}</div>
+            <div className={styles.text_body}>{props.text}</div>
+            <div>{props.data}</div>
+          </div>
+          <img
+            onClick={() => deleteItem(props.id)}
+            className={styles.img2}
+            src="./img/fav/trash.svg"
+            alt="qqq"
+          ></img>
         </div>
-        <img
-          onClick={() => deleteItem(props.id)}
-          className={styles.img2}
-          src="./img/fav/trash.svg"
-          alt="qqq"
-        ></img>
       </div>
     </main>
   );

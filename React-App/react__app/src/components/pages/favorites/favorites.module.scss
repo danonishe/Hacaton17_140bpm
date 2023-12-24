@@ -47,7 +47,7 @@
 
 .favorites {
   h1 {
-    margin-left: 15px;
+    margin: 20px 0 40px 15px;
   }
 }
 
@@ -57,8 +57,8 @@
   .img1 {
     margin: auto;
     width: 100px;
-    height: 100px;
-    margin-right: 16px;
+    height: 113px;
+    // margin-right: 16px;
   }
   .img2 {
     display: block;
@@ -68,6 +68,12 @@
   }
   .body_box {
     margin-right: 20px;
+  }
+  .body_box_head {
+    border: #c7c7c7 solid 1px;
+    border-radius: 0 10px 10px 0;
+
+    padding-left: 10px;
   }
   .title {
     font-size: 16px;

@@ -158,18 +158,21 @@ const Wash = ({
               <span>Маршрут</span>
             </button>
           </div>
-          <div className={styles.body_butbig}>
-            <img src="./img/wash/bac1.png" alt="qqq" />
+          <Link to={"/Tinder"}>
+            <div className={styles.body_butbig}>
+              <img src="./img/wash/bac1.png" alt="qqq" />
 
-            <div className={styles.body_butbig_text}>
-              <img
-                className={styles.body_butbig_img2}
-                src="./img/wash/treugolnic.png"
-                alt="qqq"
-              />
-              Куда сходить
+              <div className={styles.body_butbig_text}>
+                <img
+                  className={styles.body_butbig_img2}
+                  src="./img/wash/treugolnic.png"
+                  alt="qqq"
+                />
+                Куда сходить
+              </div>
             </div>
-          </div>
+          </Link>
+
           <div className={styles.body_butbig_img3}>
             <img width={352} src="./img/wash/foto2.png" alt="www" />
           </div>
