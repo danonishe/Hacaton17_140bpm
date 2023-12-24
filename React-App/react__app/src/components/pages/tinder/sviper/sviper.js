@@ -14,10 +14,13 @@ import "swiper/css/pagination";
 
 export default function Slider() {
     // init Swiper:
-    const swiper = new Swiper('.swiper', {
-        // configure Swiper to use modules
-        modules: [Navigation, Pagination],
-    })
+    useEffect(() => {
+        const swiper = new Swiper(".swiper", {
+          modules: [Navigation, Pagination],
+        });
+      }, []);
+    
+      // init Swiper:
     return (
         <div className="swiper" style={{display: "flex", justifyContent: "center"}}>
 
