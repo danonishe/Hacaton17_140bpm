@@ -74,10 +74,10 @@ const Wash = ({
         y: screenHeight,
       });
     }
-    if (position.y < 350) {
+    if (position.y < 250) {
       setPosition({
         //   x: touch.clientX - startPosition.x,
-        y: screenHeight - 375,
+        y: 75,
       });
     }
   };
@@ -142,6 +142,30 @@ const Wash = ({
           <img src="./img/wash/wash1.png" alt="img" />
           <div className={styles.name_blok}>
             <span className={styles.name}>Память Фаине!</span>
+          </div>
+          <div className={styles.body_text}>
+            В этом году у уроженки города Таганрога юбилей. В честь этого
+            вечером будет концерт с труппой театра.
+          </div>
+          <div className={styles.body_button}>
+            <button type="button" className="btn btn-primary">
+              <span>Маршрут</span>
+            </button>
+          </div>
+          <div className={styles.body_butbig}>
+            <img src="./img/wash/bac1.png" alt="qqq" />
+
+            <div className={styles.body_butbig_text}>
+              <img
+                className={styles.body_butbig_img2}
+                src="./img/wash/treugolnic.png"
+                alt="qqq"
+              />
+              Куда сходить
+            </div>
+          </div>
+          <div className={styles.body_butbig_img3}>
+            <img width={352} src="./img/wash/foto2.png" alt="www" />
           </div>
         </div>
       </div>

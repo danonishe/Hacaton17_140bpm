@@ -1,17 +1,62 @@
 .Wash__info {
+  overflow-y: auto;
+  height: 900px;
   width: 100%;
-  height: 2000px;
   background-color: rgb(255, 255, 255);
   padding: 20px;
   padding-top: 0;
+  .body_text {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .body_button {
+    button {
+      background-color: #7749f8;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+  }
+  .body_butbig {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    img {
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    .body_butbig_img2 {
+      border-radius: 0;
+      display: flex;
+      margin: auto;
+      padding: 5px;
+      padding-bottom: 2px;
+      padding-right: 10px;
+    }
 
+    .body_butbig_img3 {
+      img {
+        margin: 10px auto;
+      }
+    }
+
+    .body_butbig_text {
+      display: flex;
+      position: absolute;
+      font-size: 28px;
+      font-weight: 700;
+      padding-top: 20px;
+    }
+  }
   .Wash_info_title {
     .name_blok {
       margin-top: 24px;
     }
     .name {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 700;
+      margin-left: 20px;
     }
     .line {
       display: flex;
@@ -26,7 +71,7 @@
       width: 80px;
       justify-content: center;
       margin: 2px;
-      font-size: 13px;
+      font-size: 11px;
     }
     .line_inner {
       width: 60px;
