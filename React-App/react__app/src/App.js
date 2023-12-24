@@ -9,6 +9,7 @@ import Map from "./components/pages/map/map";
 import Tinder from "./components/pages/tinder/Tinder";
 
 import Favorites from "./components/pages/favorites/favorites";
+import Fishka from "./components/pages/fishka/fishka";
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Interests" element={<Interests />} />
           <Route path="/Tinder" element={<Tinder />} />
           <Route path="/Favorites" element={<Favorites />} />
+          <Route path="/Fishka" element={<Fishka />} />
         </Routes>
       </div>
     </BrowserRouter>

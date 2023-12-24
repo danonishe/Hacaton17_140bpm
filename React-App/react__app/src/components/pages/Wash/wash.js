@@ -219,11 +219,13 @@ const Wash = ({
               23-24 декабря стартует новый этап соревнования по орентации в
               городе!
             </div>
-            <div className={styles.body_button2}>
-              <button type="button" className={styles.body_button2_inner}>
-                Участвовать
-              </button>
-            </div>
+            <Link to={"/Fishka"}>
+              <div className={styles.body_button2}>
+                <button type="button" className={styles.body_button2_inner}>
+                  Участвовать
+                </button>
+              </div>
+            </Link>
           </div>
 
           <br />
