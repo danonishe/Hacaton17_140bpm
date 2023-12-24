@@ -1,7 +1,7 @@
 import styles from './Registration.module.scss';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../ui/Header/Header';
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import axios from 'axios';
 export default function Registration() {
     const [emailValue, setEmailValue] = useState('');
@@ -12,6 +12,8 @@ export default function Registration() {
     function handleRiderect() {
         navigate("/Interests");
       }
+      
+
     const handleRegistration = () => {
         // ... (ваша логика обработки регистрации)
         if (passwordValue !== confirmPasswordValue) {
@@ -28,7 +30,7 @@ export default function Registration() {
 
         // Выполните Axis запрос
         console.log(data);
-        axios.post("https://2305-95-174-102-182.ngrok-free.app/auth/register", data)
+        axios.post("https://ee9d-95-174-102-182.ngrok-free.app/auth/register", data)
             .then(response => {
                 console.log("Авторизация прошла успешно");
                 const myToken = response.data.token;
@@ -43,8 +45,6 @@ export default function Registration() {
                 console.log("нет", error);
             });
     };
-   
-
 
     return (
 

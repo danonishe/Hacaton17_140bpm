@@ -1,6 +1,24 @@
 import React from "react";
 import styles from "./myPage.module.scss";
+import axios from 'axios';
 export default function MyPage(props) {
+  const token = localStorage.getItem('token');
+  console.log(token);
+  axios.get("https://ee9d-95-174-102-182.ngrok-free.app/auth/self", {
+    headers: {
+      "Cookie": `auth._token.local=Bearer%20${token};`
+    }
+  })
+  .then(response => {
+    console.log("Запрос выполнен");
+   console.log(response);
+  })
+  .catch(error => {
+    console.log("нет", error);
+  });
+
+
+
   return (
     <main className={styles.MyPage}>
       <div className={styles.title}>

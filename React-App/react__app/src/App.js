@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Map from "./components/pages/map/map";
 import Tinder from "./components/pages/tinder/Tinder";
+
 import Favorites from "./components/pages/favorites/favorites";
 function App() {
   return (
