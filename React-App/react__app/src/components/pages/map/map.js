@@ -82,14 +82,12 @@ export default function HomePage(props) {
 
   return (
     <div className={styles.HomePage}>
-      {isMyPage ? (
+      {isMyPage && (
         <div className={styles.MyPage}>
           <div className={styles.MyPage_inner}>
             <MyPage hendelclick={hendelclick} />{" "}
           </div>
         </div>
-      ) : (
-        <div></div>
       )}
       {/* иконка лк */}
       <div onClick={() => hendelclick()} className={styles.myIcon}>

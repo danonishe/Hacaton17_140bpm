@@ -1,43 +1,63 @@
-.card__tindBg{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    border-radius: 12px 12px 0px 0px ;
-    object-fit: cover;
-    z-index: 0;
+.card__tindBg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  border-radius: 12px 12px 0px 0px;
+  object-fit: cover;
+  z-index: 0;
 }
 
-    .name_blok {
-      margin-top: 24px;
-    }
-    .name {
-      font-size: 30px;
-      font-weight: 700;
-      margin-left: 20px;
-    }
-    .line {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 60px;
-      background-color: #ffffff;
-      opacity: 1;
-      position: absolute;
-      bottom: 0;
-    }
-    .box {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 80px;
-      justify-content: center;
-      margin: 2px;
-      font-size: 11px;
-     
-    }
-   
-  
+.name_blok {
+  margin-top: 24px;
+}
+.name {
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  justify-content: center;
+  margin: 2px;
+  font-size: 11px;
+}
+
+.myIcon {
+  z-index: 100;
+  position: absolute;
+  margin: 10px;
+}
+.MyPage {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  z-index: 100;
+}
+.MyPage_inner {
+  width: 358px;
+  height: 370px;
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+}
