@@ -21,12 +21,8 @@ function App() {
           <Route path="/Interests" element={<Interests />} />
           <Route path="/Tinder" element={<Tinder />} />
           <Route path="/Favorites" element={<Favorites />} />
-<<<<<<< HEAD
           <Route path="/Fishka" element={<Fishka />} />
-=======
           <Route path="/AddSob" element={<AddSob />} />
-
->>>>>>> 8a39599bebdc474421cac27cd8af06dfcc490166
         </Routes>
       </div>
     </BrowserRouter>

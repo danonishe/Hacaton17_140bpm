@@ -72,6 +72,19 @@ export default function Fishka(props) {
 
   return (
     <div className={styles.HomePage}>
+      <div className={styles.shkala}>
+        <img
+          style={{ left: 20 }}
+          className={styles.shkala_img1}
+          src="./img/fishka/point.png"
+          alt="111"
+        />
+        <img
+          className={styles.shkala_img2}
+          src="./img/fishka/shkala.png"
+          alt="111"
+        />
+      </div>
       <div style={{ height: `${Map__Height + "px"}` }} className={styles.map}>
         <MapComponent
           marshrut={marshrut}
@@ -84,9 +97,15 @@ export default function Fishka(props) {
         />
       </div>
       <div className={styles.bottom}>
-        <div className={styles.close}></div>
-        <div>950m</div>
-        <div></div>
+        <div className={styles.close}>
+          <Link to={"/HomePage"}>
+            <img src="./img/fishka/1.svg" alt="qqq"></img>
+          </Link>
+        </div>
+        <div className={styles.tetx}>950м · 2:52 </div>
+        <div>
+          <img src="./img/fishka/2.png" alt="qqq"></img>
+        </div>
       </div>
     </div>
   );
