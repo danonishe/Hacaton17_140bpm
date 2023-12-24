@@ -62,12 +62,13 @@ function Interests() {
     };
     console.log(token);
     console.log(data);
-    const url = "https://7d4c-95-174-102-182.ngrok-free.app/user/addFavType";
+    const url = "https://2305-95-174-102-182.ngrok-free.app/user/addFavTypes";
     fetch(url, {
-      method: "POST",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
         "Cookie": `auth._token.local=Bearer%20${token};`,
+        'ngrok-skip-browser-warning':true 
       },
       body: data,
     })
@@ -107,14 +108,14 @@ function Interests() {
             <Item el={el} index={index} isActive={isActive} key={index} />
           ))}
           <div style={{ marginTop: "80px" }} className={style.button}>
-            <Link to="#">
+            <Link to="/HomePage">
               <div className={style.button_inner} onClick={handleContinue}>
                 Продолжить
               </div>
             </Link>
           </div>
           <div className={style.button}>
-            <Link to="#">
+            <Link to="/HomePages">
               <div
                 style={{ backgroundColor: "#3D8BFD", marginTop: "10px" }}
                 className={style.button_inner}

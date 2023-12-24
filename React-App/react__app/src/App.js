@@ -1,22 +1,22 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Main from "./components/pages/main/Main";
 import Authorization from "./components/pages/auth/Authorization";
 import Registration from "./components/pages/reg/Registration";
 import Interests from "./components/pages/interests/Interest";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Map from "./components/pages/map/map";
+import Tinder from "./components/pages/tinder/Tinder";
 function App() {
   return (
     <BrowserRouter>
       <div className="Container">
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/Authorization" element={<Authorization />} />
+          <Route path="/HomePage" element={<Map />} />
+          <Route path="/" element={<Authorization />} />
           <Route path="/Registration" element={<Registration />} />
           <Route path="/Interests" element={<Interests />} />
-          <Route path="/Map" element={<Map />} />
+          <Route path="/Tinder" element={<Tinder />} />
         </Routes>
       </div>
     </BrowserRouter>

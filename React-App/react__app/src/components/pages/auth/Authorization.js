@@ -9,7 +9,7 @@ export default function Authorization() {
     const [passwordValue, setPasswordValue] = useState('');
     let navigate = useNavigate();
     function handleRiderect() {
-        navigate("/");
+        navigate("/HomePage");
       }
     const handleLogin = () => {
         // Создайте объект с данными для отправки
@@ -18,7 +18,7 @@ export default function Authorization() {
             password: passwordValue,
         };
         console.log(data);
-      axios.post("https://c33f-95-174-102-182.ngrok-free.app/auth/login", data)
+      axios.post("https://2305-95-174-102-182.ngrok-free.app/auth/login", data)
         .then(response => {
           console.log("Авторизация прошла успешно");
           const myToken = response.data.token;

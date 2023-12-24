@@ -28,7 +28,7 @@ export default function Registration() {
 
         // Выполните Axis запрос
         console.log(data);
-        axios.post("https://c33f-95-174-102-182.ngrok-free.app/auth/register", data)
+        axios.post("https://2305-95-174-102-182.ngrok-free.app/auth/register", data)
             .then(response => {
                 console.log("Авторизация прошла успешно");
                 const myToken = response.data.token;
@@ -68,7 +68,7 @@ export default function Registration() {
                     <div className={styles.block__btn}>
                         <button type="button" className="btn btn-success" onClick={handleRegistration}>Зарегистрироваться</button>                </div>
                     <div className={styles.firstStart}>
-                        <Link className={styles.firstStartText} to={"./../Authorization"}> <p>Уже зарегистрирован</p></Link>
+                        <Link className={styles.firstStartText} to={"./.."}> <p>Уже зарегистрирован</p></Link>
                     </div>
                 </div>
             </div>

@@ -11,3 +11,13 @@ a{
 text-decoration: none;
 border: none;
 }
+.swiper{
+  width: 85%;
+  height: 480px;
+  background-color: #ffffff;
+ position: relative;
+ z-index: 2;
+ margin: 0 auto;
+ margin-top: 45%;
+ border-radius: 12px;
+}
