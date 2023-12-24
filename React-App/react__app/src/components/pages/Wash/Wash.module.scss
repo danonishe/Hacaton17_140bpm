@@ -68,6 +68,9 @@
     .box {
       display: flex;
       flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 80px;
       justify-content: center;
       margin: 2px;

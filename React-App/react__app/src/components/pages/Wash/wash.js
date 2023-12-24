@@ -126,9 +126,13 @@ const Wash = ({
               <span>Что рядом?</span>
             </div>
             <div className={styles.box}>
-              <img src="./img/wash/wash3.svg" alt="img"></img>
+              <Link to={"/Tinder"}>
+                <img src="./img/wash/wash3.svg" alt="img"></img>
+              </Link>
+
               <span>Маршрут</span>
             </div>
+
             <div className={styles.line_inner}></div>
             <div className={styles.box}>
               <img src="./img/wash/wash4.svg" alt="img"></img>
